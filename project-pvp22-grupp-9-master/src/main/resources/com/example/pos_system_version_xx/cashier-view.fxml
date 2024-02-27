@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="596.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pos_system_version_xx.GUIElements.CashierGUI">
+   <children>
+      <Label layoutX="19.0" layoutY="14.0" text="Scan barcode">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="insertedBarcode" layoutX="14.0" layoutY="43.0" prefHeight="38.0" prefWidth="249.0" />
+      <Button layoutX="19.0" layoutY="538.0" onAction="#resetRequested" prefHeight="38.0" prefWidth="49.0" text="Reset" />
+      <Button layoutX="273.0" layoutY="43.0" mnemonicParsing="false" onAction="#requestScanProduct" prefHeight="38.0" prefWidth="63.0" text="Scan" />
+      <TableView fx:id="cartTable" layoutX="346.0" layoutY="128.0" prefHeight="252.0" prefWidth="241.0">
+        <columns>
+          <TableColumn fx:id="cartTableName" prefWidth="123.0" text="Name" />
+            <TableColumn fx:id="cartTablePrice" prefWidth="117.0" text="Price" />
+        </columns>
+      </TableView>
+      <Label layoutX="472.0" layoutY="548.0" prefHeight="38.0" prefWidth="49.0" text="Total">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="changeLabel" layoutX="428.0" layoutY="559.0" prefHeight="17.0" prefWidth="40.0" text="0.0" />
+      <TableView fx:id="productTable" layoutX="16.0" layoutY="128.0" prefHeight="252.0" prefWidth="304.0">
+        <columns>
+          <TableColumn fx:id="productTableName" prefWidth="112.0" text="Name" />
+          <TableColumn fx:id="productTablePrice" prefWidth="58.0" text="Price" />
+            <TableColumn fx:id="productTableBarcode" prefWidth="137.0" text="Barcode" />
+        </columns>
+      </TableView>
+      <!-- Needed??? <Button layoutX="536.0" layoutY="552.0" mnemonicParsing="false" text="Pay" /> -->
+      <Button layoutX="509.0" layoutY="43.0" mnemonicParsing="false" onAction="#requestShelfSale" prefHeight="38.0" prefWidth="63.0" text="Shelf" />
+      <TextField fx:id="givenCash" layoutX="346.0" layoutY="486.0" prefHeight="38.0" prefWidth="174.0" />
+      <Button layoutX="524.0" layoutY="482.0" mnemonicParsing="false" onAction="#startPaymentMode" prefHeight="45.0" prefWidth="63.0" text="Start Payment" wrapText="true" />
+      <Label layoutX="350.0" layoutY="548.0" prefHeight="38.0" prefWidth="86.0" text="Change">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="totalLabel" layoutX="536.0" layoutY="559.0" prefHeight="17.0" prefWidth="40.0" text="0.0" />
+      <Label layoutX="347.0" layoutY="100.0" text="Shopping Cart" />
+      <Label layoutX="23.0" layoutY="100.0" text="Product Catalog" />
+      <Button layoutX="524.0" layoutY="404.0" mnemonicParsing="false" onAction="#requestAddDiscount" prefHeight="45.0" prefWidth="63.0" text="Discount" />
+      <Label layoutX="350.0" layoutY="468.0" prefHeight="17.0" prefWidth="101.0" text="Cash Received" />
+      <Button layoutX="433.0" layoutY="43.0" mnemonicParsing="false" onAction="#requestRemoveProduct" prefHeight="38.0" prefWidth="63.0" text="Remove" />
+      <TextField fx:id="givenDiscount" layoutX="346.0" layoutY="407.0" prefHeight="38.0" prefWidth="174.0" />
+      <Label layoutX="346.0" layoutY="390.0" text="Discount Amount" />
+      <Button fx:id="addButton" layoutX="354.0" layoutY="43.0" mnemonicParsing="false" onAction="#requestAddProduct" prefHeight="38.0" prefWidth="63.0" text="Add" />
+      <TextField fx:id="givenKeyword" layoutX="19.0" layoutY="407.0" prefHeight="38.0" prefWidth="180.0" />
+      <Button layoutX="205.0" layoutY="404.0" mnemonicParsing="false" onAction="#requestFindKeyword" prefHeight="45.0" prefWidth="63.0" text="Search" />
+      <Label layoutX="19.0" layoutY="390.0" text="Search By Keyword" />
+      <Label fx:id="endLabel" layoutX="139.0" layoutY="551.0" text="Sale completed successfully!" textFill="#00ff11" visible="false" />
+   </children>
+</AnchorPane>
