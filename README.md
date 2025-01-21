@@ -1,1 +1,1 @@
-Attached is a cashier system developed by my group in a course at Åbo Akademi University. 
+Attached is a cashier system developed by my group in university
